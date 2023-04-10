@@ -30,13 +30,13 @@ btn.addEventListener('click', function()
     const tempature = data['main']['temp']
     const wndspd = data['wind']['speed']
     //displaying the data on our DOM
-    city.innerHTML=`Weather of <span>${nameval}<span>`
+    city.innerHTML=`current weather in <span>${nameval}<span>:`
     temp.innerHTML = `Temperature: <span>${ convertion(tempature)} C</span>`
     description.innerHTML = `Sky Conditions: <span>${descrip}<span>`
     wind.innerHTML = `Wind Speed: <span>${wndspd} km/h<span>`
 
   })
-
+  //error message in case of an invalid input
   .catch(err => alert('enter a valid city name'))
 })
 
